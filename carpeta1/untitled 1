@@ -1,0 +1,73 @@
+#include<stdio.h>
+
+int main(){
+
+    int opt, opt2, a, b, c;
+
+    do{
+        printf("Selecciona la opcion que desees\n");
+        printf("1. Analizar numero\n");
+        printf("2. Calculadora\n");
+        printf("3. Salir\n");
+        scanf("%d", &opt);
+
+        switch (opt){
+            case 1:
+                printf("Introduce un numero\n");
+                scanf("%d", &a);
+
+                if(a % 2){
+                    printf("Es impar\n");
+                }
+                else{
+                    printf("Es par\n");
+                }
+                break;
+            case 2:
+                do{
+                    printf("Introduce una opcion\n");
+                    printf("1. Sumar\n");
+                    printf("2. Restar\n");
+                    printf("3. Salir\n");
+                    scanf("%d", &opt2);
+
+                    switch (opt2){
+                        case 1:
+                            printf("Dame un numero\n");
+                            scanf("%d", &a);
+                            printf("Dame otro numero\n");
+                            scanf("%d", &b);
+                            c = a + b;
+                            printf("El resultado es %d\n", c);
+                            break;
+
+                        case 2:
+                            printf("Dame un numero\n");
+                            scanf("%d", &a);
+                            printf("Dame otro numero\n");
+                            scanf("%d", &b);
+                            c = a - b;
+                            printf("El resultado es %d\n", c);
+                            break;
+
+                        case 3:
+                            printf("Regresando...");
+                            break;
+
+                        default:
+                            printf("No es una opcion disponible\n");
+                            break;
+                    }
+                break;
+
+            default:
+                printf("No es una opcion disponible\n");
+                break;
+
+                } while(opt2 != 3);
+
+        }
+
+    } while(opt != 3);
+    return 0;
+}
