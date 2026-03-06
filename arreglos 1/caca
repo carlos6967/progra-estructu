@@ -1,0 +1,39 @@
+#include<stdio.h>
+
+int main(){
+    int n=3;
+    int m=3;
+    int ply1[n][m];
+    int ply2[n][m];
+    int bote1=777;
+    int bote2[2]={555, 555};
+    int n1, m1;
+    for(n=0; n<3; n++){
+        for(m=0; m<3; m++){
+            ply1[n][m]=0;
+            printf("(%d)", ply1[n][m]);
+        }
+        printf("\n");
+    }
+
+    printf("ingresa las coordenadas del bote 1\n");
+    scanf("%d%d", &n1, &m1);
+
+    for(n=0; n<n1; n++){
+        for(m=0; m<m1; m++){
+            ply1[n][m]=0;
+            printf("(%d)", ply1[n][m]);
+        }
+        printf("\n");
+    }
+    ply1[n][m]=bote1;
+    printf("(%d)", bote1);
+
+    for(n+1; n<3; n++){
+        for(m; m<3; m++){
+            ply1[n][m]=0;
+            printf("(%d)", ply1[n][m]);
+        }
+        printf("\n");
+    }
+}
