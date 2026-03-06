@@ -1,1 +1,2 @@
-
+los arreglos son conjuntos de datos de un mismo tipo, en este caso, se guardaron 24 datos tipo flotante en un arreglo, el espacio de memorio que ocupo este arreglo fue de 96 bytes (4 p/u)
+tener en cuenta que el primer dato se guarda en el lugar 0
