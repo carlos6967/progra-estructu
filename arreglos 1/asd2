@@ -1,0 +1,15 @@
+#include<stdio.h>
+
+int main() {
+    int n=4;
+    float temp[n];
+
+    for(int i=0; i<n; i++){
+        printf("escribe la temperatura %.1i\n", i+1);
+        scanf("%f", &temp[i]);
+    }
+
+    for(int i=0; i<n; i++){
+        printf("%f\n", temp[i]);
+    }
+}
