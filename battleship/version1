@@ -1,0 +1,56 @@
+#include<stdio.h>
+
+int main(){
+    int x, y;
+    int sts;
+    int n, m, i, j;
+    int sts1[0][0];
+    int sts2[0][0];
+    int bote1=1;
+
+    for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            printf("(~)");
+        }
+        printf("\n");
+    }
+
+    scanf("%d", &n);
+    scanf("%d", &m);
+
+    for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            if((n == x) && (m == y)){
+                printf("(%d)", bote1);
+            }
+            else{
+                printf("(~)");    
+            }
+        } 
+        printf("\n");
+    }
+
+    printf("\n");
+
+    scanf("%d", &i);
+    scanf("%d", &j);
+
+    if((n == i) && (m == j)){
+        for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            if((i == x) && (j == y)){
+                printf("(2)");
+            }
+            else{
+                printf("(~)");    
+            }
+        } 
+        printf("\n");
+    }
+    printf("le diste!");
+
+}
+else{
+    printf("error");
+}
+}
