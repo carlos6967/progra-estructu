@@ -1,1 +1,64 @@
-sdasd
+#include<stdio.h>
+
+int main(){
+    int x, y, v, w;
+    int sts;
+    int n, m, i, j;
+    int sts1[5][5];
+    int sts2[0][0];
+    int bote1=1;
+
+    for(w=1; w<=5; w++){
+        for(v=1; v<=5; v++){
+            sts1[v][w] = 0;
+        }
+    }
+
+    for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            printf("(~)");
+        }
+        printf("\n");
+    }
+
+    scanf("%d", &n);
+    scanf("%d", &m);
+
+    for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            if((n == x) && (m == y)){
+                printf("(%d)", bote1);
+                sts1[n][m]=1;
+            }
+            else{
+                printf("(~)");    
+            }
+        } 
+        printf("\n");
+    }
+
+    printf("\n");
+
+    scanf("%d", &i);
+    scanf("%d", &j);
+
+    if((n == i) && (m == j)){
+        for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            if((i == x) && (j == y)){
+                printf("(2)");
+                sts1[i][j]=1;
+            }
+            else{
+                printf("(~)");    
+            }
+        } 
+        printf("\n");
+    }
+    printf("le diste!");
+
+}
+else{
+    printf("error");
+}
+}
