@@ -1,0 +1,210 @@
+#include<stdio.h>
+
+int main(){
+    int x, y, v, w;
+    int sts;
+    int n, m, i, j;
+    int sts1[5][5];
+    int sts2[0][0];
+    int bote1=67;
+    int bote2=69;
+    int n1, m1;
+
+ /*   for(w=1; w<=5; w++){   NO ES NECESARIA ESTA PARTE 
+        for(v=1; v<=5; v++){
+            sts1[v][w] = 0;
+        }
+    }*/
+
+    for(y=0; y<5; y++){                //DE AQUI  -------------------------
+        for(x=0; x<5; x++){
+            sts1[x][y] = 0;               //imprimir agua e iniciar matriz principal
+            printf("(~)");
+        }
+        printf("\n");
+    }
+
+    scanf("%d", &n);                //coords bote1
+    scanf("%d", &m);               
+
+    if(!((n > 6) && (m > 6))){
+    for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            if(((n == x) && (m == y))){        //poner bote 1 sin q se salga de la matriz
+                printf("(%d)", bote1);
+                sts1[n-1][m-1]=1;
+            }
+            else{
+                printf("(~)");    
+            }
+        } 
+        printf("\n");
+    }}
+    else{
+        printf("mas q 5");  
+    }                                    
+
+    printf("\n");                 //A AQUI ESTA BIEN --------------------------
+
+    scanf("%d", &n);                //coords bote2
+    scanf("%d", &m);  
+                                 //cambiar el estado de la matriz en n y m
+
+   /* for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            if((n == x) && (m == y)){
+                sts1[n][m] = 2;
+            }
+        }}*/
+       n--;
+       m--;
+        for(y=0; y<5; y++){
+            for(x=0; x<5; x++){
+                if((n == x) && (m == y)){
+                    sts1[n][m]=2;
+                    printf("(%d)", bote2);
+                }
+                else if(sts1[x][y] == 1){
+                    printf("(%d)", bote1);
+                }
+                else if(sts1[x][y] == 0){
+                    printf("(~)");
+                }
+                else{
+                    printf("(error)");
+                }
+}
+printf("\n");
+        }
+
+        //-------------------------------------------------------------------- segunda parte del bote2
+        scanf("%d", &n1);                //coords bote2 parte 2
+    scanf("%d", &m1);
+    n1--;
+       m1--;
+
+       if(((n - n1) + (m - m1)) == 1 || ((n - n1) + (m - m1)) == -1){
+        for(y=0; y<5; y++){
+            for(x=0; x<5; x++){
+                if((n1 == x) && (m1 == y)){
+                    sts1[x][y]=2;
+                    printf("(%d)", bote2);
+                }
+                else if(sts1[x][y] == 2){
+                    printf("(%d)", bote2);
+                }
+                else if(sts1[x][y] == 1){
+                    printf("(%d)", bote1);
+                }
+                else if(sts1[x][y] == 0){
+                    printf("(~)");
+                }
+                else{
+                    printf("(error)");
+                }
+            
+}
+printf("\n");
+        }
+    }
+    else{
+        printf("no es valida esa posicion\n");
+    }
+
+ /*   for(y=0; y<5; y++){
+            for(x=0; x<5; x++){
+                printf("%d",sts1[x][y]);
+            }
+        printf("\n");
+        } */
+
+    //ATAQUEEEEEEEEEEEEEEEEEE----------------------------------------------
+
+    printf("donde quieres atacar?");
+    scanf("%d", &n);
+    scanf("%d", &m);
+    n--;
+    m--;
+    for(y=0; y<5; y++){
+            for(x=0; x<5; x++){
+                if((sts1[n][m] == 1 || sts1[n][m] == 2) && ((n == x) && (m == y))){
+                    sts1[n][m]=3;
+                    printf("(x)");
+                }
+                else if(sts1[x][y] == 2){
+                    printf("(%d)", bote2);
+                }
+                else if(sts1[x][y] == 1){
+                    printf("(%d)", bote1);
+                }
+                else if(sts1[x][y] == 0){
+                    printf("(~)");
+                }
+                else{
+                    printf("(error)");
+                }
+            }
+            printf("\n");
+                }
+
+for(y=0; y<5; y++){
+            for(x=0; x<5; x++){
+                printf("%d",sts1[x][y]);
+            }
+        printf("\n");
+}
+                /*  switch(sts1[n][m]){
+                case 0:
+                    printf("(~)"); 
+                break;
+                case 1:
+                    printf("(%d)",bote1);
+                break;
+                case 2:
+                    printf("(%d)", bote2);
+                break;
+                default:
+                    printf("error");
+                break;
+        }*/
+    
+        /*    if(){
+                printf("(%d)", bote1);
+                sts1[n][m]=1;
+            }
+            else{
+                printf("(~)");    
+            }
+        } 
+        printf("\n");
+    }                                    
+
+    printf("\n");
+
+
+
+
+
+ /*   scanf("%d", &n);
+    scanf("%d", &j);
+
+    if((n == i) && (m == j)){
+        for(y=1; y<=5; y++){
+        for(x=1; x<=5; x++){
+            if((i == x) && (j == y)){
+                printf("(2)");
+                sts1[i][j]=1;
+            }
+            else{
+                printf("(~)");    
+            }
+        } 
+        printf("\n");
+    }
+    printf("le diste!");
+
+}
+else{
+    printf("error");
+}*/
+}
