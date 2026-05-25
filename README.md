@@ -1,7 +1,10 @@
 # Programación Estructurada
 Nombre del estudiante: Carlos Francisco Bustamante Salazar
+
 Código: 325019873
+
 Sección: D04
+
 Profesor: Jorge Ernesto Lopez Arce Delgado
 ## Descripción
 Repositorio de actividades y evidencias desarrolladas durante el curso de
