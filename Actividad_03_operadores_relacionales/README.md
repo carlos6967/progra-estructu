@@ -4,4 +4,3 @@ Programa que explica el funcionamiento de los operadores relacionales mediante c
 
 ## Temas aplicados
 - Operadores relacionales.
-- Expresiones booleanas.
