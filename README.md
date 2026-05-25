@@ -1,21 +1,19 @@
 # Programación Estructurada
-Nombre del estudiante:
-Código:
-Sección:
-Profesor:
+Nombre del estudiante: Carlos Francisco Bustamante Salazar
+Código: 325019873
+Sección: D04
+Profesor: Jorge Ernesto Lopez Arce Delgado
 ## Descripción
 Repositorio de actividades y evidencias desarrolladas durante el curso de
 Programación Estructurada en lenguaje C.
-## Temas trabajados (revisen los temas de cada actividad), Ejemplo:
+## Temas trabajados
 - Tipos de datos
 - Operadores
-- Condicionales
-- Ciclos
+- Operadores relacionales
+- Estructuras de control ciclicas
 - Arreglos
-- Matrices
-- Cadenas
-- Funciones
+- Strings
+- Files
+- Struct y union
 - Punteros
 - Memoria dinámica
-- Struct y union
-- Archivos
